@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="ClosedXML" Version="0.104.2" />
+        <PackageReference Include="ErrorOr" Version="2.0.1" />
+        <PackageReference Include="FluentValidation" Version="11.11.0" />
+        <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.11.0" />
+        <PackageReference Include="MediatR" Version="12.4.1" />
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.1"/>
+        <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.3.0" />
+        <PackageReference Include="Serilog" Version="4.2.0" />
+        <PackageReference Include="Serilog.AspNetCore" Version="9.0.0" />
+        <PackageReference Include="Serilog.Exceptions" Version="8.4.0" />
+        <PackageReference Include="Serilog.Sinks.Console" Version="6.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Update="appsettings.Development.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <Content Update="appsettings.Production.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <Content Update="appsettings.Testing.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Commands\" />
+      <Folder Include="Contracts\Requests\" />
+      <Folder Include="Contracts\Responses\" />
+      <Folder Include="Queries\" />
+      <Folder Include="Settings\" />
+    </ItemGroup>
+
+</Project>
